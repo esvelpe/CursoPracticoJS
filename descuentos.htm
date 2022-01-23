@@ -17,14 +17,32 @@
 
         <form action="">
             <label for="inputPrice">Escribe el precio de tu producto: </label>
-            <input id="inputPrice">
-            
-            <label for="inputDiscount">Escribe el descuento de tu producto: </label>
-            <input id="inputDiscount">
+            <input id="inputPrice" type="number">
 
-            <button type="button">Clacular el precio con descuento</button>
+            <label for="inputDiscount">Escribe el descuento de tu producto: </label>
+            <input id="inputDiscount" type="number">
+
+            <button type="button" onclick="buttonPriceDiscount()">Calcular el precio con descuento</button>
+
+            <p id="ResultP"></p>
         </form>
 
+    </section>
+
+    <section>
+        <h2> En este espacio puedes conocer el precio de tu producto con algún cupon: </h2>
+
+        <form action="">
+            <label for="inputPriceCupon">Escribe el precio de tu producto: </label>
+            <input id="inputPriceCupon" type="number">
+
+            <label for="inputCupon">Escribe el cupon de descuento para tu producto: </label>
+            <input id="inputCupon" type="text">
+
+            <button type="button" onclick="buttonCuponDiscount()">Calcular el descuento aplicado por el cupon</button>
+
+            <p id="ResultadoC"></p>
+        </form>
     </section>
 
     <script src="./descuentos.js"></script>
