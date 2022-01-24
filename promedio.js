@@ -50,8 +50,32 @@ function calcularModa(lista){
 
     listaOrdenada=Object.entries(listaConteo).sort((a,b)=>a[1]-b[1])
 
-    moda=listaOrdenada[listaOrdenada.length-1][0]
+    moda=listaOrdenada[listaOrdenada.length-1]
 
     return moda
 
+}
+
+function calcularMediaGeometrica (lista){
+    const productoElementos=lista.reduce((a,b)=>a*b)
+
+    const mediaGeométrica=Math.pow(productoElementos,1/lista.length)
+
+    
+
+    return mediaGeométrica
+
+}
+
+function calcularPromedioPonderado(lista){
+
+    const noteWithCredit=lista.map(a=>a.note*a.credit)
+
+    const sumOfNoteWithCredit=noteWithCredit.reduce((sum=0,newValue)=>sum+newValue)
+
+    const credits=lista.map(a=>a.credit)
+
+    const sumOfCredits=credits.reduce((sum=0,newValue)=>sum+newValue)
+
+    const promedioPonderado=sumOfNoteWithCredit/sumOfCredits
 }
