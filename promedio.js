@@ -37,3 +37,21 @@ function calcularMediana(lista){
     return mediana
 
 }
+
+a={name:"valeria",edad:15}
+
+
+
+function calcularModa(lista){
+
+    listaConteo={}
+
+    lista.map(elemento => listaConteo[elemento]?listaConteo[elemento]++ : listaConteo[elemento]=1)
+
+    listaOrdenada=Object.entries(listaConteo).sort((a,b)=>a[1]-b[1])
+
+    moda=listaOrdenada[listaOrdenada.length-1][0]
+
+    return moda
+
+}
